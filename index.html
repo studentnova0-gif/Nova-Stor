@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        Save More on App |
+        Become a Seller |
+        Help & Support
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="logo">
+             NOVA SHOP ZONE
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search in ShopZone"
+            >
+
+            <button onclick="searchProducts()">
+                🔍
+            </button>
+        </div>
+
+        <div class="nav-links">
+
+            <span onclick="openLogin()">
+                Login
+            </span>
+
+            <span onclick="showCart()">
+                🛒 Cart
+                <b id="cartCount">0</b>
+            </span>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p>BIG ONLINE SALE</p>
+
+            <h1>
+                Everything You Need
+                <br>
+                In One Place
+            </h1>
+
+            <button onclick="scrollToProducts()">
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="container">
+
+        <h2>Categories</h2>
+
+        <div class="categories">
+
+            <div onclick="filterCategory('Electronics')">
+                📱
+                <span>Electronics</span>
+            </div>
+
+            <div onclick="filterCategory('Fashion')">
+                👗
+                <span>Fashion</span>
+            </div>
+
+            <div onclick="filterCategory('Beauty')">
+                💄
+                <span>Beauty</span>
+            </div>
+
+            <div onclick="filterCategory('Home')">
+                🏠
+                <span>Home</span>
+            </div>
+
+            <div onclick="filterCategory('Sports')">
+                ⚽
+                <span>Sports</span>
+            </div>
+
+            <div onclick="filterCategory('Grocery')">
+                🛒
+                <span>Grocery</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="container" id="products">
+
+        <div class="section-title">
+
+            <h2>
+                Flash Sale
+            </h2>
+
+            <button onclick="renderProducts(products)">
+                View All
+            </button>
+
+        </div>
+
+        <div
+            id="productGrid"
+            class="products"
+        ></div>
+
+    </section>
+
+
+    <!-- CART MODAL -->
+
+    <div
+        id="cartModal"
+        class="modal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="close"
+                onclick="closeModal('cartModal')"
+            >
+                ×
+            </button>
+
+            <h2>Your Cart</h2>
+
+            <div id="cartItems"></div>
+
+            <h3 id="cartTotal"></h3>
+
+            <button
+                class="checkout"
+                onclick="checkout()"
+            >
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOGIN MODAL -->
+
+    <div
+        id="loginModal"
+        class="modal"
+    >
+
+        <div class="modal-box login">
+
+            <button
+                class="close"
+                onclick="closeModal('loginModal')"
+            >
+                ×
+            </button>
+
+            <h2>Login</h2>
+
+            <input
+                type="text"
+                placeholder="Phone / Email"
+            >
+
+            <input
+                type="password"
+                placeholder="Password"
+            >
+
+            <button
+                class="checkout"
+                onclick="demoLogin()"
+            >
+                Login
+            </button>
+
+            <p>
+                New customer?
+                Create an account.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            <h3>NOVA SHOP ZONE</h3>
+            <p>
+                Your online marketplace.
+            </p>
+        </div>
+
+        <div>
+            <h3>Customer Care</h3>
+            <p>Help Center</p>
+            <p>Returns & Refunds</p>
+        </div>
+
+        <div>
+            <h3>About</h3>
+            <p>About Us</p>
+            <p>Contact</p>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
